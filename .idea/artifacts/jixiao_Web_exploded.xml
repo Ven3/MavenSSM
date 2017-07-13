@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jixiao:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/jixiao_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="jixiao/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jixiao" />
+        </element>
+        <element id="library" level="project" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>

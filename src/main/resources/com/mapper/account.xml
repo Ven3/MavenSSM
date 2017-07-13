@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "//UNKNOWN/"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.AccountDao">
+
+	<!-- 登录 -->
+	<select id="login" parameterType="com.entity.account" resultMap="accountMap">
+		select account.ACCOUNTID,account.REALNAME,tb_right.url rights
+		from account
+		join ta_account_role on account.ACCOUNTID=ta_account_role.ACCOUNTID
+		join ta_role_right on ta_account_role.roleid=ta_role_right.roleid
+		join tb_right on ta_role_right.rightid=tb_right.rightid
+		where accountname=#{accountname} and password = #{password}
+	</select>
+	<resultMap type="account" id="accountMap">
+		<id column="ACCOUNTID" property="accountid"/>
+		<result column="REALNAME" property="realname"/>
+		<collection property="rights" ofType="string">
+			<result column="rights"/>
+		</collection>
+	</resultMap>
+
+
+</mapper> 
