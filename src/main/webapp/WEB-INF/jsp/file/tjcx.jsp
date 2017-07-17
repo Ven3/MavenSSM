@@ -35,7 +35,7 @@
 								<a href="file/tjcx" class="txt-blue"><strong>统计查询</strong></a>
 							</div></td>
 						<c:if
-							test="${sessionScope.account.getRights().contains('xtgl') }">
+							test="${sessionScope.Account.getRights().contains('xtgl.jsp') }">
 							<td width="110" height="30"
 								background="images/button/top-menu-off.jpg"><div
 									align="center">
@@ -81,7 +81,7 @@
 								<tr>
 									<td>
 										<div align="right">
-											<iframe src="tjcx_tjList.action" width="100%" marginwidth="0"
+											<iframe src="tjcx_tjList" width="100%" marginwidth="0"
 												marginheight="0" frameborder="0" scrolling="yes"
 												align="center" name="Middle3" id="Middle" height="450"></iframe>
 										</div>

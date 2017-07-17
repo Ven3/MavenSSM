@@ -1,7 +1,6 @@
 package com.entity;
 
-@Table("kh_level")
-public class Kh_LevelModel {
+public class Kh_Level {
 
 	private Integer level_id;
 	private Integer level_index;
@@ -10,7 +9,7 @@ public class Kh_LevelModel {
 	private Double level_value;
 	private String level_info;
 
-	public Kh_LevelModel() {
+	public Kh_Level() {
 	}
 
 	public void setLevel_id(Integer level_id) {

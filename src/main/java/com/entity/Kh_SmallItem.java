@@ -1,7 +1,6 @@
 package com.entity;
 
-@Table("kh_smallitem")
-public class Kh_SmallItemModel {
+public class Kh_SmallItem {
 
 	private Integer smallitem_id;
 	private Integer bigitem_id;
@@ -12,7 +11,7 @@ public class Kh_SmallItemModel {
 	private String smallitem_detail;
 	private String smallitem_info;
 
-	public Kh_SmallItemModel() {
+	public Kh_SmallItem() {
 	}
 
 	public void setSmallitem_id(Integer smallitem_id) {

@@ -2,8 +2,7 @@ package com.entity;
 
 import java.sql.Date;
 
-@Table("pendingdoc")
-public class PendingDocModel {
+public class PendingDoc {
 
 	private Integer pendingdocid;
 	private Integer accountid;
@@ -11,7 +10,7 @@ public class PendingDocModel {
 	private Integer state;
 	private Date finishtime;
 
-	public PendingDocModel() {
+	public PendingDoc() {
 	}
 
 	public void setPendingdocid(Integer pendingdocid) {

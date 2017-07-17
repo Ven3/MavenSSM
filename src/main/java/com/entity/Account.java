@@ -5,8 +5,7 @@ import org.apache.ibatis.type.Alias;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Table("account")
-public class account {
+public class Account {
 
 	private Integer accountid;
 	private Integer acc_accountid;
@@ -17,7 +16,7 @@ public class account {
 	private String realname;
 	private List<String> rights = new ArrayList<String>();
 
-	public account() {
+	public Account() {
 	}
 
 	public void setAccountid(Integer accountid) {
@@ -87,7 +86,7 @@ public class account {
 
 	@Override
 	public String toString() {
-		return "account{" +
+		return "Account{" +
 				"accountid=" + accountid +
 				", acc_accountid=" + acc_accountid +
 				", dutyid=" + dutyid +

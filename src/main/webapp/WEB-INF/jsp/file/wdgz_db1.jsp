@@ -48,7 +48,7 @@
 		obj.glxlvalue = $("input[name='glxlvalue']").eq(index).val();
 		obj.xskfvalue = $("input[name='xskfvalue']").eq(index).val();
 
-		var result = window.showModalDialog("file/wdgz_db2.jsp", obj,
+		var result = window.showModalDialog("file/wdgz_db2", obj,
 				"center:yes;dialogHeight:540px; dialogWidth:1024px;");
 
 		for ( var property in result) {

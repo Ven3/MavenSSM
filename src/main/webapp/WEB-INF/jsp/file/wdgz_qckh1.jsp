@@ -75,12 +75,12 @@
 			</tr>
 			<tr>
 				<td>考核日期</td>
-				<td><input type="text" name="checktime" value="">yyyy-MM-dd
+				<td><input type="date" name="checktime" value="">yyyy-MM-dd
 				</td>
 			</tr>
 			<tr>
 				<td>结束日期</td>
-				<td><input type="text" name="stoptime" value="">yyyy-MM-dd
+				<td><input type="date" name="stoptime" value="">yyyy-MM-dd
 				</td>
 			</tr>
 			<tr>

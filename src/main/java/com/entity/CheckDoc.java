@@ -2,8 +2,7 @@ package com.entity;
 
 import java.sql.Date;
 
-@Table("checkdoc")
-public class CheckDocModel {
+public class CheckDoc {
 
 	private Integer docid;
 	private Integer accountid;
@@ -13,7 +12,7 @@ public class CheckDocModel {
 	private Date checktime;
 	private Date stoptime;
 
-	public CheckDocModel() {
+	public CheckDoc() {
 	}
 
 	public void setDocid(Integer docid) {

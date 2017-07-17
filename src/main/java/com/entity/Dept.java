@@ -1,13 +1,12 @@
 package com.entity;
 
-@Table("dept")
-public class DeptModel {
+public class Dept {
 
 	private String deptno;
 	private String deptname;
 	private String descript;
 
-	public DeptModel() {
+	public Dept() {
 	}
 
 	public void setDeptno(String deptno) {

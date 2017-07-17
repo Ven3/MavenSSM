@@ -1,13 +1,12 @@
 package com.entity;
 
-@Table("duty")
-public class DutyModel {
+public class Duty {
 
 	private Integer dutyid;
 	private String dutyname;
 	private Integer dutylevel;
 
-	public DutyModel() {
+	public Duty() {
 	}
 
 	public void setDutyid(Integer dutyid) {

@@ -62,7 +62,7 @@
 									</td>
 								</tr>
 
-								<c:forEach var="map" items="${list}" varStatus="state">
+								<c:forEach var="map" items="${khlist}" varStatus="state">
 									<tr bgcolor='${state.count%2==0?"#E5EEFF":"#FFFFFF"}'>
 										<td class="table-right-bottom-gray">
 											<div align="center">
@@ -71,7 +71,7 @@
 											</div>
 										</td>
 										<td class="table-right-bottom-gray" align="center"><a
-											href="wodegz-qckh.htm" target="_blank" class="txt-gray">${map.get('DOCNAME')}</a>
+											href="file/wdgz_qckh1" target="Middle" class="txt-gray">${map.get('DOCNAME')}</a>
 										</td>
 										<td class="table-right-bottom-gray" align="center"><a href="#"
 											class="txt-gray">${map.get('REALNAME')}</a></td>
@@ -101,7 +101,7 @@
 															<td width="60" background="images/button/an-bg.jpg"
 																class="txt-blue">
 																<div align="center">
-																	<a href="file/wdgz_qckh1.jsp" class="txt-blue">起草新考核</a>
+																	<a href="file/wdgz_qckh1" class="txt-blue">起草新考核</a>
 																</div>
 															</td>
 															<td><img src="images/button/an-right.jpg" width="4"

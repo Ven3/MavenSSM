@@ -1,14 +1,13 @@
 package com.entity;
 
-@Table("tb_right")
-public class Tb_RightModel {
+public class Tb_Right {
 
 	private Integer rightid;
 	private String rigthname;
 	private String url;
 	private String descript;
 
-	public Tb_RightModel() {
+	public Tb_Right() {
 	}
 
 	public void setRightid(Integer rightid) {

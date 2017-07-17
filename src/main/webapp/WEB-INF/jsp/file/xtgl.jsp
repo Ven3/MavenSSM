@@ -30,7 +30,7 @@
 								<a href="file/wdgz" class="txt-gray">我的工作</a>
 							</div></td>
 						<c:if
-							test="${sessionScope.account.getRights().contains('tjcx') }">
+							test="${sessionScope.Account.getRights().contains('tjcx') }">
 							<td width="110" height="30"
 								background="images/button/top-menu-off.jpg"><div
 									align="center">

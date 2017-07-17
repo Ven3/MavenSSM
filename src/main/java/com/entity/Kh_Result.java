@@ -1,7 +1,6 @@
 package com.entity;
 
-@Table("kh_result")
-public class Kh_ResultModel {
+public class Kh_Result {
 
 	private Integer result_id;
 	private Integer result_index;
@@ -10,7 +9,7 @@ public class Kh_ResultModel {
 	private Double result_value;
 	private String result_info;
 
-	public Kh_ResultModel() {
+	public Kh_Result() {
 	}
 
 	public void setResult_id(Integer result_id) {

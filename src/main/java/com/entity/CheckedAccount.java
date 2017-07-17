@@ -2,8 +2,7 @@ package com.entity;
 
 import java.sql.Date;
 
-@Table("checkedaccount")
-public class CheckedAccountModel {
+public class CheckedAccount {
 
 	private Integer checkedid;
 	private Integer accountid;
@@ -24,7 +23,7 @@ public class CheckedAccountModel {
 	private Integer state;
 	private Date checktime;
 
-	public CheckedAccountModel() {
+	public CheckedAccount() {
 	}
 
 	public void setCheckedid(Integer checkedid) {
@@ -173,7 +172,7 @@ public class CheckedAccountModel {
 
 	@Override
 	public String toString() {
-		return "CheckedAccountModel [checkedid=" + checkedid + ", accountid="
+		return "CheckedAccount [checkedid=" + checkedid + ", accountid="
 				+ accountid + ", docid=" + docid + ", checkedaccountid="
 				+ checkedaccountid + ", sxszvalue=" + sxszvalue
 				+ ", ljzlvalue=" + ljzlvalue + ", gzzfvalue=" + gzzfvalue

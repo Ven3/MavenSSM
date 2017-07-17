@@ -56,7 +56,7 @@
 										</div></td>
 								</tr>
 
-								<c:forEach items="${list }" var="map">
+								<c:forEach items="${khlist }" var="map">
 									<tr>
 										<td class="table-right-bottom-gray"><div align="center">
 												<input type="checkbox" name="docid"

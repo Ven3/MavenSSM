@@ -1,7 +1,6 @@
 package com.entity;
 
-@Table("checkvalue")
-public class CheckValueModel {
+public class CheckValue {
 
 	private Integer valueid;
 	private Double sxszvalue;
@@ -25,7 +24,7 @@ public class CheckValueModel {
 	private Double peer;
 	private Double inferior;
 
-	public CheckValueModel() {
+	public CheckValue() {
 	}
 
 	public void setValueid(Integer valueid) {

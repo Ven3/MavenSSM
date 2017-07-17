@@ -1,7 +1,7 @@
 package com.service;
 
 import com.dao.AccountDao;
-import com.entity.account;
+import com.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,8 +16,8 @@ public class AccountService {
     @Autowired
     private AccountDao accountDao;
 
-    public account login(account account) {
-        account account1 = accountDao.login(account);
-        return account1;
+    public Account login(Account Account) {
+        Account loginAccount = accountDao.login(Account);
+        return loginAccount;
     }
 }

@@ -23,6 +23,7 @@
     <tx:annotation-driven/>
 
     <mvc:resources location="/" mapping="/**" />
+
     <!--springmvc视图解析器-->
     <bean id="jspViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">

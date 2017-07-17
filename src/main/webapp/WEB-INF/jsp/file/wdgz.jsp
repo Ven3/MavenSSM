@@ -31,7 +31,7 @@
 								<a href="file/wdgz" class="txt-blue"><strong>我的工作</strong></a>
 							</div></td>
 						<c:if
-							test="${sessionScope.account.getRights().contains('tjcx') }">
+							test="${sessionScope.Account.getRights().contains('tjcx.jsp') }">
 							<td width="110" height="30"
 								background="images/button/top-menu-off.jpg"><div
 									align="center">
@@ -39,7 +39,7 @@
 								</div></td>
 						</c:if>
 						<c:if
-							test="${sessionScope.account.getRights().contains('xtgl') }">
+							test="${sessionScope.Account.getRights().contains('xtgl.jsp') }">
 							<td width="110" height="30"
 								background="images/button/top-menu-off.jpg"><div
 									align="center">
@@ -83,18 +83,18 @@
 											align="center">
 											<img src="images/ico/left-menu-ico.gif" width="9" height="9"
 												hspace="6" align="absmiddle"><a
-												href="file/wogz_gz" target="Middle" class="txt-blue">跟踪</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												href="file/wdgz_gz" target="Middle" class="txt-blue">跟踪</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										</div></td>
 								</tr>
 
 								<c:if
-									test="${sessionScope.account.getRights().contains('qckh_khList.action') }">
+									test="${sessionScope.Account.getRights().contains('qckh_khList.action') }">
 									<tr>
 										<td height="33" background="images/button/left-menu-an-bg.jpg"><div
 												align="center">
 												<img src="images/ico/left-menu-ico.gif" width="9" height="9"
 													hspace="6" align="absmiddle"><a
-													href="qckh_khList.action" target="Middle" class="txt-blue">起草考核</a>&nbsp;&nbsp;
+													href="qckh_khList" target="Middle" class="txt-blue">起草考核</a>&nbsp;&nbsp;
 											</div></td>
 									</tr>
 								</c:if>
@@ -109,7 +109,7 @@
 								<tr>
 									<td>
 										<div align="right">
-											<iframe src="dbgz_dbList.action" width="100%" marginwidth="0"
+											<iframe src="dbgz_dbList" width="100%" marginwidth="0"
 												marginheight="0" frameborder="0" scrolling="yes"
 												align="middle" name="Middle" id="Middle" height="450"></iframe>
 										</div>

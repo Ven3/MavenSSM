@@ -1,12 +1,11 @@
 package com.entity;
 
-@Table("ta_role_right")
-public class Ta_Role_RightModel {
+public class Ta_Role_Right {
 
 	private Integer roleid;
 	private Integer rightid;
 
-	public Ta_Role_RightModel() {
+	public Ta_Role_Right() {
 	}
 
 	public void setRoleid(Integer roleid) {

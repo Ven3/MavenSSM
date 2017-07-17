@@ -1,7 +1,6 @@
 package com.entity;
 
-@Table("kh_bigitem")
-public class Kh_BigItemModel {
+public class Kh_BigItem {
 
 	private Integer bigitem_id;
 	private Integer bigitem_index;
@@ -10,7 +9,7 @@ public class Kh_BigItemModel {
 	private Double bigitem_value;
 	private String bigitem_info;
 
-	public Kh_BigItemModel() {
+	public Kh_BigItem() {
 	}
 
 	public void setBigitem_id(Integer bigitem_id) {

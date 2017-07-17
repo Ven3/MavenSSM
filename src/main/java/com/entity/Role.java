@@ -3,15 +3,14 @@ package com.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-@Table("role")
-public class RoleModel {
+public class Role {
 
 	private Integer roleid;
 	private String rolename;
 	private String descript;
 	private List<String> rights = new ArrayList<String>();
 
-	public RoleModel() {
+	public Role() {
 	}
 
 	public void setRoleid(Integer roleid) {
