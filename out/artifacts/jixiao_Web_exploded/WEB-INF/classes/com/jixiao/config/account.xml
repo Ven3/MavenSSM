@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "//UNKNOWN/"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="account">
+
+	<!-- 登录 -->
+	<select id="login" parameterType="account" resultMap="accountMap">
+		select account.ACCOUNTID,account.REALNAME,tb_right.url rights
+		from account
+		join ta_account_role on account.ACCOUNTID=ta_account_role.ACCOUNTID
+		join ta_role_right on ta_account_role.roleid=ta_role_right.roleid
+		join tb_right on ta_role_right.rightid=tb_right.rightid
+		where accountname=#{accountname} and password = #{password}
+	</select>
+	<resultMap type="account" id="accountMap">
+		<id column="ACCOUNTID" property="accountid"/>
+		<result column="REALNAME" property="realname"/>
+		<collection property="rights" ofType="string">
+			<result column="rights"/>
+		</collection>
+	</resultMap>
+
+	<!-- 根据部门编号获得二级经理 -->
+	<select id="getSecond" parameterType="string" resultType="account">
+		select * from account where dutyid in(select dutyid from duty where
+		dutylevel = 2) and deptno = #{deptno}
+	</select>
+
+	<!-- 根据被考核人的ID，查询所有对其考核的人员ID -->
+	<select id="getIdByCheckedAccount" parameterType="integer"
+		resultType="integer">
+		select accountid from account where (dutyid in(select
+		dutyid from duty where dutylevel in(1,2) and accountid != #{id})) or
+		(acc_accountid = #{id})
+	</select>
+
+</mapper> 

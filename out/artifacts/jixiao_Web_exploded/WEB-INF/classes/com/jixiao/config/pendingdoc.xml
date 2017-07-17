@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "//UNKNOWN/"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pendingdoc">
+
+	<!-- 插入待办考核公文 -->
+	<insert id="insert" parameterType="pendingdoc">
+		insert into pendingdoc
+		(pendingdocid,accountid,docid,state,finishtime) values
+		(null,#{accountid},#{docid},0,null)
+	</insert>
+
+	<!-- 查询当前用户的待办公文 -->
+	<select id="getDocByAccount" parameterType="int" resultType="map">
+		select pendingdoc.docid DOCID,DOCNAME,CHECKTIME,STOPTIME from
+		pendingdoc join checkdoc on pendingdoc.docid = checkdoc.docid join
+		account on account.accountid = checkdoc.accountid where
+		pendingdoc.accountid = #{id} and
+		pendingdoc.state = 0 order by stoptime
+		desc
+	</select>
+
+	<!-- 根据公文ID查询所有被考核人 -->
+	<select id="getAccountByDoc" parameterType="map" resultType="map">
+		select checkedaccount.*,REALNAME from checkedaccount join account on
+		checkedaccount.CHECKEDACCOUNTID = account.ACCOUNTID where docid =
+		#{docid} and checkedaccount.ACCOUNTID = #{accountid} order by
+		CHECKEDACCOUNTID
+	</select>
+
+	<!-- 修改待办公文的状态为已办 -->
+	<update id="updateState" parameterType="pendingdoc">
+		update pendingdoc set
+		state=1,finishtime=now() where docid=#{docid} and
+		accountid=#{accountid}
+	</update>
+</mapper> 
